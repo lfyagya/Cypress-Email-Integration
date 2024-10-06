@@ -25,7 +25,7 @@ SendGrid SMTP:
 - Port: 587
 - Requires an API key
 
-### Installation
+# Installation
 
 1. **Install Cypress (if not already installed):**
 
@@ -44,21 +44,23 @@ SendGrid SMTP:
     ```bash
     npm install dotenv
 
-## Configuration
+# Configuration
 1. Setup Cypress Mochawesome Reporter in your cypress.config.js file
 2. Setup Nodemailer for Email Sending in your nodemailersendmail.js file
 3. Setup .env File for SMTP Configuration
-- Add a .env file in the root directory to store your email credentials and SMTP settings
+   - Add a .env file in the root directory to store your email credentials and SMTP settings
 4. Create a Pug Template for HTML Email
-- This Pug template dynamically receives the JSON data from the Mochawesome report and creates a simple HTML structure for the email.
+   - This Pug template dynamically receives the JSON data from the Mochawesome report and creates a simple HTML structure for the email.
 
-## Usage
-# Running Tests and Generating JSON Report
+**Note**: If you're using Gmail and have 2FA enabled, you need to generate an App Password: <SMTP_PASS=your-email-password> and use it as your password.
+
+# Usage
+## Running Tests and Generating JSON Report
 1. **To run your tests and generate the report:**
 
    ```bash
    npx cypress run --reporter cypress-mochawesome-reporter
-# Sending the Email with the Generated Report
-2. **To send email:**
+## Sending the Email with the Generated Report
+1. **To send email:**
     ```bash
     node <nodemailersendmail.js> file name
