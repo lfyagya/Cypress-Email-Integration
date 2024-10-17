@@ -1,0 +1,5 @@
+USER = "user@gmail.com"
+PASSWORD = 
+EMAIL_FROM_NAME = "Your Name"
+EMAIL_FROM_ADDRESS = "emailfromaddress@gmail.com"
+EMAIL_TO = "emailto@gmail.com"
