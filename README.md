@@ -92,4 +92,4 @@ SendGrid SMTP:
 
 ## Screenshot
 
-![Email Sent Screenshot](./images/screenshot.png)
+![Email Sent Screenshot](./images/emailSent.png)
