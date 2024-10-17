@@ -47,9 +47,14 @@ SendGrid SMTP:
 # Configuration
 1. Setup Cypress Mochawesome Reporter in your cypress.config.js file
 2. Setup Nodemailer for Email Sending in your nodemailersendmail.js file
-3. Setup .env File for SMTP Configuration
+   - Config the path for "mochawesome-report.json" in the nodemailersendmail file, example: 'const jsonData = require("../Cypress-Email-Integration/cypress/reports/.jsons/mochawesome-report.json")'
+   - Config the path for "reportTemplate.pug" in the nodemailersendmail file, example: 'const compiledTemplate = pug.compileFile(
+  "../Cypress-Email-Integration/cypress/scripts/reportTemplate.pug"
+);'
+
+4. Setup .env File for SMTP Configuration
    - Add a .env file in the root directory to store your email credentials and SMTP settings
-4. Create a Pug Template for HTML Email
+5. Create a Pug Template for HTML Email
    - This Pug template dynamically receives the JSON data from the Mochawesome report and creates a simple HTML structure for the email.
 
 **Note**: If you're using Gmail and have 2FA enabled, you need to generate an App Password: <SMTP_PASS=your-email-password> and use it as your password.
